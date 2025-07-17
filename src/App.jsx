@@ -11,7 +11,7 @@ import {
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import poto from "./assets/poto.PNG";
+import avatar from "./assets/avatar.PNG";
 
 
 const App = () => {
@@ -170,7 +170,7 @@ const App = () => {
             </div>
             <div className="relative">
               <img
-                src={poto}
+                src={avatar}
                 alt="Developer Character"
                 className="w-full max-w-md mx-auto"
               />
