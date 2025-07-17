@@ -91,12 +91,12 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0e1734] text-white">
+    <div className="min-h-screen bg-[#0e1630] text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-white">Portfolio</div>
+            <div className="text-2xl font-bold text-white italic">Baudoin B</div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
