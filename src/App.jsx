@@ -96,7 +96,9 @@ const App = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-white italic">Baudoin B</div>
+            <div className="text-2xl font-bold text-white italic">
+              Baudoin B
+            </div>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
@@ -159,9 +161,13 @@ const App = () => {
               </h1>
               <p className="text-gray-400 text-lg">Full-stack Web Developer</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-md transition-colors">
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-md transition-colors"
+                >
                   Hire Me
                 </button>
+
                 <button className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2">
                   <Download className="w-4 h-4" />
                   Download CV
