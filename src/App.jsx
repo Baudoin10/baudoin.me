@@ -93,7 +93,6 @@ const Portfolio = () => {
     );
   };
 
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden">
       {/* Floating Elements */}
@@ -160,10 +159,18 @@ const Portfolio = () => {
                   <Zap className="w-4 h-4" />
                   Hire Me
                 </button>
-                <button className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2">
+                {/* <button className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2">
                   <Download className="w-4 h-4" />
                   Download CV
-                </button>
+                </button> */}
+                <a
+                  href="/Bolingo_Baudoin_CV.pdf"
+                  download
+                  className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2"
+                >
+                  <Download className="w-4 h-4" />
+                  Download CV
+                </a>
               </div>
             </div>
             <div className="relative fade-in-delay-2">
