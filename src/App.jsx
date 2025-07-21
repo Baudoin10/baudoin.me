@@ -159,10 +159,7 @@ const Portfolio = () => {
                   <Zap className="w-4 h-4" />
                   Hire Me
                 </button>
-                {/* <button className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2">
-                  <Download className="w-4 h-4" />
-                  Download CV
-                </button> */}
+             
                 <a
                   href="/Bolingo_Baudoin_CV.pdf"
                   download
