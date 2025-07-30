@@ -87,12 +87,29 @@ const Portfolio = () => {
    ];
 
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(
-      "Message sent! Thank you for your message. I'll get back to you soon!"
-    );
-  };
+ const [formData, setFormData] = useState({
+   name: "",
+   email: "",
+   subject: "",
+   message: "",
+ });
+
+
+   const handleSubmit = (e) => {
+     e.preventDefault();
+     alert(
+       "Message sent! Thank you for your message. I'll get back to you soon!"
+     );
+
+     // Reset form
+     setFormData({
+       name: "",
+       email: "",
+       subject: "",
+       message: "",
+     });
+   };
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden">
@@ -301,7 +318,6 @@ const Portfolio = () => {
                       <p className="text-sm font-medium">View Project</p>
                     </div>
                   </div>
-                
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
@@ -448,6 +464,10 @@ const Portfolio = () => {
                       placeholder="Your name"
                       className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
                       required
+                      value={formData.name}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                     />
                   </div>
                   <div>
@@ -459,6 +479,10 @@ const Portfolio = () => {
                       placeholder="Your email"
                       className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
                       required
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                     />
                   </div>
                 </div>
@@ -471,6 +495,10 @@ const Portfolio = () => {
                     placeholder="Project subject"
                     className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
                     required
+                    value={formData.subject}
+                    onChange={(e) =>
+                      setFormData({ ...formData, subject: e.target.value })
+                    }
                   />
                 </div>
                 <div>
@@ -482,6 +510,10 @@ const Portfolio = () => {
                     rows={5}
                     className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder:text-slate-400 resize-none focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300"
                     required
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                   />
                 </div>
                 <button
