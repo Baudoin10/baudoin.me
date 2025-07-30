@@ -53,38 +53,42 @@ const Portfolio = () => {
     },
   ];
 
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description:
-        "Full-stack e-commerce solution with React and Node.js, featuring payment integration and admin dashboard.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      category: "Full Stack",
-      status: "Live",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "Collaborative task management with real-time updates, team collaboration, and advanced filtering.",
-      image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tags: ["React", "Socket.io", "Express", "PostgreSQL"],
-      category: "Web App",
-      status: "Live",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "Modern portfolio with animations, 3D elements, and interactive components showcasing creative work.",
-      image:
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      tags: ["React", "Tailwind", "Three.js", "Framer Motion"],
-      category: "Frontend",
-      status: "Live",
-    },
-  ];
+   const projects = [
+     {
+       title: "E-Commerce Platform",
+       description:
+         "Full-stack e-commerce solution with React and Node.js, featuring payment integration and admin dashboard.",
+       image:
+         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+       tags: ["React", "Node.js", "MongoDB", "Stripe"],
+       category: "Full Stack",
+       status: "Live",
+       githubUrl: "https://github.com/your-username/ecommerce-platform",
+     },
+     {
+       title: "Task Management App",
+       description:
+         "Collaborative task management with real-time updates, team collaboration, and advanced filtering.",
+       image:
+         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+       tags: ["React", "Socket.io", "Express", "PostgreSQL"],
+       category: "Web App",
+       status: "Live",
+       githubUrl: "https://github.com/your-username/task-manager",
+     },
+     {
+       title: "Portfolio Website",
+       description:
+         "Modern portfolio with animations, 3D elements, and interactive components showcasing creative work.",
+       image:
+         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+       tags: ["React", "Tailwind", "Three.js", "Framer Motion"],
+       category: "Frontend",
+       status: "Live",
+       githubUrl: "https://github.com/your-username/portfolio",
+     },
+   ];
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -328,10 +332,15 @@ const Portfolio = () => {
                       </span>
                     ))}
                   </div>
-                  <button className="btn-primary w-full flex items-center justify-center gap-2 text-sm bg-red-500/20 py-4 shadow-lg ">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary w-full flex items-center justify-center gap-2 text-sm bg-red-500/20 py-4 shadow-lg transition hover:bg-red-600/30"
+                  >
                     <ExternalLink className="w-4 h-4" />
                     View Project
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
