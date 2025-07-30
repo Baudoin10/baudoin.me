@@ -62,7 +62,6 @@ const Portfolio = () => {
          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
        tags: ["React", "Node.js", "MongoDB", "Stripe"],
        category: "Full Stack",
-       status: "Live",
        githubUrl: "https://github.com/your-username/ecommerce-platform",
      },
      {
@@ -73,7 +72,6 @@ const Portfolio = () => {
          "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
        tags: ["React", "Socket.io", "Express", "PostgreSQL"],
        category: "Web App",
-       status: "Live",
        githubUrl: "https://github.com/your-username/task-manager",
      },
      {
@@ -84,7 +82,6 @@ const Portfolio = () => {
          "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
        tags: ["React", "Tailwind", "Three.js", "Framer Motion"],
        category: "Frontend",
-       status: "Live",
        githubUrl: "https://github.com/your-username/portfolio",
      },
    ];
@@ -304,11 +301,7 @@ const Portfolio = () => {
                       <p className="text-sm font-medium">View Project</p>
                     </div>
                   </div>
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-green-500 text-green-400 px-2 py-1 rounded-full text-xs font-medium">
-                      {project.status}
-                    </span>
-                  </div>
+                
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
