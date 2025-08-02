@@ -93,14 +93,12 @@ const Portfolio = () => {
    subject: "",
    message: "",
  });
-
-
    const handleSubmit = (e) => {
      e.preventDefault();
      alert(
        "Message sent! Thank you for your message. I'll get back to you soon!"
      );
-     
+
      setFormData({
        name: "",
        email: "",
