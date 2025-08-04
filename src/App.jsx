@@ -116,7 +116,6 @@ const Portfolio = () => {
         <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl animate-spin-slow"></div>
       </div>
 
-      {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-700/50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -143,7 +142,7 @@ const Portfolio = () => {
           </div>
         </div>
       </nav>
-      
+
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-center pt-20 animated-bg"
