@@ -143,8 +143,7 @@ const Portfolio = () => {
           </div>
         </div>
       </nav>
-
-      {/* Hero Section */}
+      
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-center pt-20 animated-bg"
