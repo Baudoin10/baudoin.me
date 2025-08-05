@@ -53,6 +53,7 @@ const Portfolio = () => {
     },
   ];
 
+  
    const projects = [
      {
        title: "E-Commerce Platform",
