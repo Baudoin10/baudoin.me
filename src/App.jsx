@@ -35,7 +35,7 @@ const Portfolio = () => {
         "Building scalable mobile applications with React Native and native technologies for iOS and Android.",
       icon: <Smartphone className="w-8 h-8" />,
       color: "from-blue-500 to-purple-600",
-      features: ["Cross-platform", "Native Performance", "App Store Ready"],
+      features: ["Cross-platform", "React Native", "App Store Ready"],
     },
     {
       title: "Frontend Development",
@@ -51,7 +51,7 @@ const Portfolio = () => {
         "Developing robust server-side applications, APIs, and database architectures.",
       icon: <Server className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      features: ["RESTful APIs", "Database Design", "Cloud Integration"],
+      features: ["RESTful APIs", "Node js", "Cloud Integration","Python"],
     },
   ];
 
@@ -551,16 +551,10 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-slate-700/50 glass">
+      <footer className="bg-slate-900 py-8 border-t border-slate-700/50">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-gradient">Baudoin B</h3>
-              <p className="text-slate-400">
-                Building the future, one line of code at a time.
-              </p>
-            </div>
-
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Left Column: Navigation */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">
                 Navigation
@@ -570,7 +564,7 @@ const Portfolio = () => {
                   <button
                     key={item}
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="block text-slate-400 hover:text-red-400 transition-colors duration-300 underline-animate"
+                    className="block text-slate-400 hover:text-red-400 transition-colors duration-300 font-medium"
                   >
                     {item}
                   </button>
@@ -578,58 +572,40 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">
-                Services
-              </h4>
-              <div className="space-y-2">
-                {[
-                  "Web Development",
-                  "Mobile Apps",
-                  "UI/UX Design",
-                  "Consulting",
-                ].map((service) => (
-                  <div
-                    key={service}
-                    className="text-slate-400 hover:text-red-400 transition-colors duration-300"
-                  >
-                    {service}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">
-                Follow Me
-              </h4>
+            {/* Right Column: Social Icons */}
+            <div className="flex md:justify-end items-center md:items-start md:flex-col space-y-4 md:space-y-6">
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/baudoinvic"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110"
+                  className="text-slate-400 hover:text-red-400 transition duration-300"
                 >
-                  <FaGithub className="w-5 h-5 text-slate-400 hover:text-red-400" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/baudoin-bolingo-b19229221/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110"
-                >
-                  <FaLinkedin className="w-5 h-5 text-slate-400 hover:text-red-400" />
+                  <FaGithub className="text-4xl" />
                 </a>
                 <a
                   href="https://www.instagram.com/baudoin_10/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110"
+                  className="text-slate-400 hover:text-red-400 transition duration-300"
                 >
-                  <FaInstagram className="w-5 h-5 text-slate-400 hover:text-red-400" />
+                  <FaInstagram className="text-4xl" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/baudoin-bolingo-b19229221/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-red-400 transition duration-300"
+                >
+                  <FaLinkedin className="text-4xl" />
                 </a>
               </div>
             </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="mt-8 border-t border-slate-700 pt-6 text-center text-slate-400 text-sm">
+            © 2025 Baudoin Bolingo, All rights reserved.
           </div>
         </div>
       </footer>
