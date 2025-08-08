@@ -130,7 +130,6 @@ const Portfolio = () => {
           <div className="text-slate-300 text-gradient italic animate-fadeInUp">
             Baudoin B
           </div>
-
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {["Home", "About", "Work", "Portfolio", "Contact"].map(
