@@ -604,15 +604,30 @@ const Portfolio = () => {
                 Follow Me
               </h4>
               <div className="flex space-x-4">
-                <div className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110">
+                <a
+                  href="https://github.com/baudoinvic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110"
+                >
                   <FaGithub className="w-5 h-5 text-slate-400 hover:text-red-400" />
-                </div>
-                <div className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110">
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/baudoin-bolingo-b19229221/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110"
+                >
                   <FaLinkedin className="w-5 h-5 text-slate-400 hover:text-red-400" />
-                </div>
-                <div className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110">
+                </a>
+                <a
+                  href="https://www.instagram.com/baudoin_10/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110"
+                >
                   <FaInstagram className="w-5 h-5 text-slate-400 hover:text-red-400" />
-                </div>
+                </a>
               </div>
             </div>
           </div>
