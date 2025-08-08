@@ -19,6 +19,8 @@ import {
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import avatar from "./assets/avatar.PNG";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+
 
 const Portfolio = () => {
   
@@ -177,7 +179,6 @@ const Portfolio = () => {
         )}
       </nav>
 
-
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-center pt-20 animated-bg"
@@ -199,13 +200,29 @@ const Portfolio = () => {
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 I AM <span className="text-gradient">BAUDOIN</span>
                 <br />
-                <span className="text-white">BOLINGO</span>
+                <span className="text-white">
+                  <Typewriter
+                    words={[
+                      "BOLINGO",
+                      "a Developer",
+                      "a Designer",
+                      "a Creator",
+                    ]}
+                    loop={false}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1500}
+                  />
+                </span>
               </h1>
+
               <p className="text-slate-400 text-lg flex items-center gap-2">
                 <Code className="w-5 h-5 text-red-400" />
                 Full-stack Web Developer
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              {/* <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button
                   onClick={() => scrollToSection("contact")}
                   className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2"
@@ -222,7 +239,37 @@ const Portfolio = () => {
                   <Download className="w-4 h-4" />
                   Download CV
                 </a>
-              </div>
+              </div> */}
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4 pt-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                {/* Hire Me Button */}
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => scrollToSection("contact")}
+                  className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2"
+                >
+                  <Zap className="w-4 h-4" />
+                  Hire Me
+                </motion.button>
+
+                {/* Download CV Button */}
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="/bolingo-baudoin-cv.pdf"
+                  download
+                  className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2"
+                >
+                  <Download className="w-4 h-4" />
+                  Download CV
+                </motion.a>
+              </motion.div>
             </motion.div>
 
             {/* Right Side Image + Social */}
@@ -232,6 +279,7 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
+              whileHover={{ scale: 1.03, rotate: 1 }}
             >
               <div className="relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse"></div>
@@ -251,23 +299,36 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 flex flex-col space-y-3">
-                <div className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110 animate-float">
-                  <FaGithub className="w-6 h-6 text-slate-400 hover:text-red-400" />
-                </div>
-                <div
-                  className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110 animate-float"
-                  style={{ animationDelay: "0.5s" }}
-                >
-                  <FaLinkedin className="w-6 h-6 text-slate-400 hover:text-red-400" />
-                </div>
-                <div
-                  className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300 hover:scale-110 animate-float"
-                  style={{ animationDelay: "1s" }}
-                >
-                  <FaInstagram className="w-6 h-6 text-slate-400 hover:text-red-400" />
-                </div>
-              </div>
+              <motion.div
+                className="absolute -top-4 -right-4 flex flex-col space-y-3"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      delayChildren: 0.5,
+                      staggerChildren: 0.2,
+                    },
+                  },
+                }}
+              >
+                {[FaGithub, FaLinkedin, FaInstagram].map((Icon, i) => (
+                  <motion.div
+                    key={i}
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300"
+                  >
+                    <Icon className="w-6 h-6 text-slate-400 hover:text-red-400" />
+                  </motion.div>
+                ))}
+              </motion.div>
             </motion.div>
           </div>
         </div>
