@@ -20,6 +20,8 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import avatar from "./assets/avatar.PNG";
 
 const Portfolio = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -108,7 +110,6 @@ const Portfolio = () => {
      });
    };
 
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden">
       <div className="fixed inset-0 pointer-events-none">
@@ -117,31 +118,57 @@ const Portfolio = () => {
         <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl animate-spin-slow"></div>
       </div>
 
-      <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-700/50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-slate-300  text-gradient italic animate-fadeInUp">
-              Baudoin B
-            </div>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900 bg-opacity-80 backdrop-blur-md border-b border-slate-700/50">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="text-slate-300 text-gradient italic animate-fadeInUp">
+            Baudoin B
+          </div>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
-              {["Home", "About", "Work", "Portfolio", "Contact"].map(
-                (section, index) => (
-                  <button
-                    key={section}
-                    onClick={() => scrollToSection(section.toLowerCase())}
-                    className={`text-slate-300 hover:text-red-400 transition-all duration-300 capitalize underline-animate fade-in-delay-${
-                      index + 1
-                    }`}
-                  >
-                    {section}
-                  </button>
-                )
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8">
+            {["Home", "About", "Work", "Portfolio", "Contact"].map(
+              (section, index) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section.toLowerCase())}
+                  className={`text-slate-300 hover:text-red-400 transition-all duration-300 capitalize underline-animate fade-in-delay-${
+                    index + 1
+                  }`}
+                >
+                  {section}
+                </button>
+              )
+            )}
+          </div>
+
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? (
+                <X className="w-6 h-6 text-white" />
+              ) : (
+                <Menu className="w-6 h-6 text-white" />
               )}
-            </div>
+            </button>
           </div>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-slate-900 bg-opacity-95 px-6 py-4 space-y-4">
+            {["Home", "About", "Work", "Portfolio", "Contact"].map(
+              (section, index) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section.toLowerCase())}
+                  className="block w-full text-left text-slate-300 hover:text-red-400 transition-all duration-200 capitalize"
+                >
+                  {section}
+                </button>
+              )
+            )}
+          </div>
+        )}
       </nav>
 
       <section
