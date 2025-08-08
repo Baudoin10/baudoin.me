@@ -43,7 +43,7 @@ const Portfolio = () => {
         "Creating responsive, user-friendly interfaces with modern frameworks and cutting-edge design.",
       icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-blue-500",
-      features: ["React/Next.js", "Responsive Design", "Modern UI/UX"],
+      features: ["React/Next.js", "Responsive Design", "Modern UI/UX", "Javascript"],
     },
     {
       title: "Backend Development",
