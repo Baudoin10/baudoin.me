@@ -177,6 +177,7 @@ const Portfolio = () => {
         )}
       </nav>
 
+
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-center pt-20 animated-bg"
