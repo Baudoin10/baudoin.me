@@ -20,7 +20,6 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import avatar from "./assets/avatar.PNG";
 import { motion } from "framer-motion";
 
-
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -45,7 +44,12 @@ const Portfolio = () => {
         "Creating responsive, user-friendly interfaces with modern frameworks and cutting-edge design.",
       icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-blue-500",
-      features: ["React/Next.js", "Responsive Design", "Modern UI/UX", "Javascript"],
+      features: [
+        "React/Next.js",
+        "Responsive Design",
+        "Modern UI/UX",
+        "Javascript",
+      ],
     },
     {
       title: "Backend Development",
@@ -53,64 +57,62 @@ const Portfolio = () => {
         "Developing robust server-side applications, APIs, and database architectures.",
       icon: <Server className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      features: ["RESTful APIs", "Node js", "Cloud Integration","Python"],
+      features: ["RESTful APIs", "Node js", "Cloud Integration", "Python"],
     },
   ];
 
-  
-   const projects = [
-     {
-       title: "E-Commerce Platform",
-       description:
-         "Full-stack e-commerce solution with React and Node.js, featuring payment integration and admin dashboard.",
-       image:
-         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-       tags: ["React", "Node.js", "MongoDB", "Stripe"],
-       category: "Full Stack",
-       githubUrl: "https://github.com/your-username/ecommerce-platform",
-     },
-     {
-       title: "Task Management App",
-       description:
-         "Collaborative task management with real-time updates, team collaboration, and advanced filtering.",
-       image:
-         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-       tags: ["React", "Socket.io", "Express", "PostgreSQL"],
-       category: "Web App",
-       githubUrl: "https://github.com/your-username/task-manager",
-     },
-     {
-       title: "Portfolio Website",
-       description:
-         "Modern portfolio with animations, 3D elements, and interactive components showcasing creative work.",
-       image:
-         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-       tags: ["React", "Tailwind", "Three.js", "Framer Motion"],
-       category: "Frontend",
-       githubUrl: "https://github.com/your-username/portfolio",
-     },
-   ];
+  const projects = [
+    {
+      title: "E-Commerce Platform",
+      description:
+        "Full-stack e-commerce solution with React and Node.js, featuring payment integration and admin dashboard.",
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      category: "Full Stack",
+      githubUrl: "https://github.com/your-username/ecommerce-platform",
+    },
+    {
+      title: "Task Management App",
+      description:
+        "Collaborative task management with real-time updates, team collaboration, and advanced filtering.",
+      image:
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      tags: ["React", "Socket.io", "Express", "PostgreSQL"],
+      category: "Web App",
+      githubUrl: "https://github.com/your-username/task-manager",
+    },
+    {
+      title: "Portfolio Website",
+      description:
+        "Modern portfolio with animations, 3D elements, and interactive components showcasing creative work.",
+      image:
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      tags: ["React", "Tailwind", "Three.js", "Framer Motion"],
+      category: "Frontend",
+      githubUrl: "https://github.com/your-username/portfolio",
+    },
+  ];
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(
+      "Message sent! Thank you for your message. I'll get back to you soon!"
+    );
 
- const [formData, setFormData] = useState({
-   name: "",
-   email: "",
-   subject: "",
-   message: "",
- });
-   const handleSubmit = (e) => {
-     e.preventDefault();
-     alert(
-       "Message sent! Thank you for your message. I'll get back to you soon!"
-     );
-
-     setFormData({
-       name: "",
-       email: "",
-       subject: "",
-       message: "",
-     });
-   };
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden">
@@ -179,7 +181,14 @@ const Portfolio = () => {
       >
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 fade-in">
+            {/* Left Side Text */}
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               <div className="text-red-400 text-lg font-medium flex items-center gap-2">
                 <Star className="w-5 h-5 animate-pulse" />
                 Hi there,
@@ -211,8 +220,16 @@ const Portfolio = () => {
                   Download CV
                 </a>
               </div>
-            </div>
-            <div className="relative fade-in-delay-2">
+            </motion.div>
+
+            {/* Right Side Image + Social */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <div className="relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse"></div>
                 <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700">
@@ -248,35 +265,47 @@ const Portfolio = () => {
                   <FaInstagram className="w-6 h-6 text-slate-400 hover:text-red-400" />
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* What I Do Section */}
+
       <section id="work" className="py-24 relative">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16 fade-in">
+          {/* Header */}
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <div className="text-red-400 text-lg mb-4 flex items-center justify-center gap-2">
               <Zap className="w-5 h-5" />
               What I do
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Better <span className="text-gradient">Design</span>,
-              <br />
+              Better <span className="text-gradient">Design</span>,<br />
               Better <span className="text-gradient">Experiences</span>
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
               I'm building scalable web applications, mobile apps and beautiful
               websites for companies around the world.
             </p>
-          </div>
+          </motion.div>
 
+          {/* Cards */}
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <motion.div
                 key={index}
-                className={`card p-8 group fade-in-delay-${index + 1}`}
+                className="card p-8 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
               >
                 <div
                   className={`text-white mb-4 p-4 rounded-xl bg-gradient-to-r ${service.color} inline-block group-hover:scale-110 transition-transform duration-300`}
@@ -298,7 +327,7 @@ const Portfolio = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -307,28 +336,38 @@ const Portfolio = () => {
       {/* Portfolio Section */}
       <section id="portfolio" className="py-24 relative">
         <div className="container mx-auto px-6">
-          <div className="mb-16 fade-in">
-            <div className="text-red-400 text-lg mb-4 flex items-center gap-2">
+          {/* Header */}
+          <motion.div
+            className="mb-16 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-red-400 text-lg mb-4 flex items-center justify-center gap-2">
               <Star className="w-5 h-5" />
               Portfolio
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Some of my <span className="text-gradient">best works</span>
             </h2>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center">
               <button className="text-red-400 border-b-2 border-red-400 pb-2 font-medium hover:bg-red-400/10 px-4 transition-all duration-300">
                 All Projects
               </button>
             </div>
-          </div>
+          </motion.div>
 
+          {/* Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
-                className={`card overflow-hidden group fade-in-delay-${
-                  index + 1
-                }`}
+                className="card overflow-hidden group"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -375,7 +414,7 @@ const Portfolio = () => {
                     View Project
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -616,4 +655,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
