@@ -424,7 +424,14 @@ const Portfolio = () => {
       <section id="about" className="py-24 relative">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 fade-in">
+            {/* Left - Text */}
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               <div className="text-red-400 text-lg flex items-center gap-2">
                 <Star className="w-5 h-5" />
                 About me
@@ -441,9 +448,16 @@ const Portfolio = () => {
                 efficient, responsive, user-friendly interfaces that deliver
                 exceptional user experiences.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="relative fade-in-delay-2">
+            {/* Right - Image & Years */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-purple-600 rounded-2xl blur-2xl opacity-20 animate-pulse"></div>
                 <img
@@ -458,7 +472,7 @@ const Portfolio = () => {
                   <div className="text-sm">Years Experience</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
