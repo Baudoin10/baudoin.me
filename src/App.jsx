@@ -121,12 +121,6 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden">
-      <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-500/10 rounded-full blur-3xl animate-pulse-glow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl animate-spin-slow"></div>
-      </div>
-
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900 bg-opacity-80 backdrop-blur-md border-b border-slate-700/50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-slate-300 text-gradient italic animate-fadeInUp">
@@ -204,9 +198,9 @@ const Portfolio = () => {
                   <Typewriter
                     words={[
                       "BOLINGO",
-                      "a Developer",
-                      "a Designer",
-                      "a Creator",
+                      "a Software Developer",
+                      "a Mobile App developer",
+                      "a Blockchain Enthusiast",
                     ]}
                     loop={false}
                     cursor
@@ -220,26 +214,8 @@ const Portfolio = () => {
 
               <p className="text-slate-400 text-lg flex items-center gap-2">
                 <Code className="w-5 h-5 text-red-400" />
-                Full-stack Web Developer
+                Software Developer
               </p>
-              {/* <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2"
-                >
-                  <Zap className="w-4 h-4" />
-                  Hire Me
-                </button>
-
-                <a
-                  href="/bolingo-baudoin-cv.pdf"
-                  download
-                  className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2"
-                >
-                  <Download className="w-4 h-4" />
-                  Download CV
-                </a>
-              </div> */}
               <motion.div
                 className="flex flex-col sm:flex-row gap-4 pt-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -287,7 +263,7 @@ const Portfolio = () => {
                   <div className="w-48 h-48 rounded-full mx-auto mb-6 overflow-hidden border-4 border-gradient-to-r from-red-500 to-purple-600">
                     <img
                       src={avatar}
-                      alt="Baudoin Bolingo - Full-stack Developer"
+                      alt="Baudoin Bolingo - Software Developer"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -295,7 +271,7 @@ const Portfolio = () => {
                     <h3 className="text-xl font-bold text-white mb-2">
                       Baudoin Bolingo
                     </h3>
-                    <p className="text-slate-400">Full-stack Developer</p>
+                    <p className="text-slate-400">Software Developer</p>
                   </div>
                 </div>
               </div>
