@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import avatar from "./assets/avatar.PNG";
+import { motion } from "framer-motion";
+
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
