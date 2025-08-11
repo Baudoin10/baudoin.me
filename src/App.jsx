@@ -88,12 +88,12 @@ const Portfolio = () => {
       githubUrl: "https://github.com/your-username/task-manager",
     },
     {
-      title: "Portfolio Website",
+      title: "Umuganda App ",
       description:
         "Modern portfolio with animations, 3D elements, and interactive components showcasing creative work.",
       image:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      tags: ["React", "Tailwind", "Three.js", "Framer Motion"],
+      tags: ["React native", "Express", "Node js", "Mongo DB"],
       category: "Frontend",
       githubUrl: "https://github.com/your-username/portfolio",
     },
