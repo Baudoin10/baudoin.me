@@ -80,7 +80,7 @@ const Portfolio = () => {
     {
       title: "Intern Connect App",
       description:
-        "Collaborative task management with real-time updates, team collaboration, and advanced filtering.",
+        "Intern Connect aims to modernize internship management, bridging the gap between students, institutions, and companies through a seamless digital experience.",
       image:
         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
       tags: ["React", "Socket.io", "Express", "Node js"],
@@ -88,13 +88,13 @@ const Portfolio = () => {
       githubUrl: "https://github.com/your-username/task-manager",
     },
     {
-      title: "Umuganda App ",
+      title: "Cowlytics App ",
       description:
-        "this umuganda application, helps organize and track community service activities, making it easier for people to join and stay involved in monthly Umuganda events..",
+        "This app  helps people—especially farmers, veterinarians, and livestock managers—monitor the health and activity of their animals, detect issues early, save time and labor, and make better decisions using real-time data and insights. It’s especially useful in large or remote farms where constant manual monitoring is difficult.",
       image:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      tags: ["React native", "Express", "Node js", "Mongo DB"],
-      category: "Mobile App",
+      tags: ["React js , Tawlind css, React native", "Laravel", "MySQL"],
+      category: "Mobile App. Web",
       githubUrl: "https://github.com/your-username/portfolio",
     },
   ];
