@@ -698,7 +698,7 @@ const Portfolio = () => {
             <div className="flex md:justify-end items-center md:items-start md:flex-col space-y-4 md:space-y-6">
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/baudoinvic"
+                  href="https://github.com/Baudoin10"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-red-400 transition duration-300"
