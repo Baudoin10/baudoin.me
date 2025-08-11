@@ -68,7 +68,7 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Murakoze Platform",
+      title: "Murakoze Recommnadations Platform",
       description:
         "Full-stack e-commerce solution with React and Node.js, featuring payment integration and admin dashboard.",
       image:
@@ -90,11 +90,11 @@ const Portfolio = () => {
     {
       title: "Umuganda App ",
       description:
-        "Modern portfolio with animations, 3D elements, and interactive components showcasing creative work.",
+        "this umuganda application, helps organize and track community service activities, making it easier for people to join and stay involved in monthly Umuganda events..",
       image:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
       tags: ["React native", "Express", "Node js", "Mongo DB"],
-      category: "Frontend",
+      category: "Mobile App",
       githubUrl: "https://github.com/your-username/portfolio",
     },
   ];
