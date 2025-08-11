@@ -68,22 +68,22 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Murakoze Platform",
       description:
         "Full-stack e-commerce solution with React and Node.js, featuring payment integration and admin dashboard.",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      tags: ["React", "Node.js", "MySQL", "Typescript"],
       category: "Full Stack",
       githubUrl: "https://github.com/your-username/ecommerce-platform",
     },
     {
-      title: "Task Management App",
+      title: "Intern Connect App",
       description:
         "Collaborative task management with real-time updates, team collaboration, and advanced filtering.",
       image:
         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tags: ["React", "Socket.io", "Express", "PostgreSQL"],
+      tags: ["React", "Socket.io", "Express", "Node js"],
       category: "Web App",
       githubUrl: "https://github.com/your-username/task-manager",
     },
