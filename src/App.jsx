@@ -275,7 +275,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
-              <motion.div
+              {/* <motion.div
                 className="absolute -top-4 -right-4 flex flex-col space-y-3"
                 initial="hidden"
                 animate="visible"
@@ -303,6 +303,49 @@ const Portfolio = () => {
                   >
                     <Icon className="w-6 h-6 text-slate-400 hover:text-red-400" />
                   </motion.div>
+                ))}
+              </motion.div> */}
+              <motion.div
+                className="absolute -top-4 -right-4 flex flex-col space-y-3"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      delayChildren: 0.5,
+                      staggerChildren: 0.2,
+                    },
+                  },
+                }}
+              >
+                {[
+                  { icon: FaGithub, link: "https://github.com/Baudoin10" },
+                  {
+                    icon: FaLinkedin,
+                    link: "https://www.linkedin.com/in/baudoin-bolingo-b19229221/",
+                  },
+                  {
+                    icon: FaInstagram,
+                    link: "https://www.instagram.com/baudoin_10/",
+                  },
+                ].map(({ icon: Icon, link }, i) => (
+                  <motion.a
+                    key={i}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-slate-700 cursor-pointer transition-all duration-300"
+                  >
+                    <Icon className="w-6 h-6 text-slate-400 hover:text-red-400" />
+                  </motion.a>
                 ))}
               </motion.div>
             </motion.div>
