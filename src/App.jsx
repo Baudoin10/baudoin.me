@@ -70,10 +70,10 @@ const Portfolio = () => {
     {
       title: "Murakoze Recommnadations Platform",
       description:
-        "Full-stack e-commerce solution with React and Node.js, featuring payment integration and admin dashboard.",
+        " the Murakoze Device, is a game-changer in customer experience solutions, enabling businesses to capture valuable customer feedback effortlessly.",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tags: ["React", "Node.js", "MySQL", "Typescript"],
+      tags: ["React", "React js", "Node.js", "MySQL", "Typescript"],
       category: "Full Stack",
       githubUrl: "https://github.com/your-username/ecommerce-platform",
     },
