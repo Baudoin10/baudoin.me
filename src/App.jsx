@@ -75,7 +75,7 @@ const Portfolio = () => {
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       tags: ["React", "React js", "Node.js", "MySQL", "Typescript"],
       category: "Full Stack",
-      githubUrl: "https://github.com/your-username/ecommerce-platform",
+      githubUrl: "https://github.com/Baudoin10/murakoze_recommandations.git",
     },
     {
       title: "Intern Connect App",
@@ -85,7 +85,7 @@ const Portfolio = () => {
         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
       tags: ["React", "Socket.io", "Express", "Node js"],
       category: "Web App",
-      githubUrl: "https://github.com/your-username/task-manager",
+      githubUrl: "https://github.com/Baudoin10/intern-connect.git",
     },
     {
       title: "Cowlytics App ",
@@ -95,7 +95,7 @@ const Portfolio = () => {
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
       tags: ["React js , Tawlind css, React native", "Laravel", "MySQL"],
       category: "Mobile App. Web",
-      githubUrl: "https://github.com/your-username/portfolio",
+      githubUrl: "https://github.com/Pinto026/cowlytic-mobi.git",
     },
   ];
 
