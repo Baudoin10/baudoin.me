@@ -25,7 +25,6 @@ import { Typewriter } from "react-simple-typewriter";
 const Portfolio = () => {
   
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
