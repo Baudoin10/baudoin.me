@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { Star, Code, Zap, Download } from "lucide-react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import avatar from "./assets/avatar.PNG";
+import avatar from "../assets/avatar.png";
 
 const Hero = ({ scrollToSection }) => {
   return (
