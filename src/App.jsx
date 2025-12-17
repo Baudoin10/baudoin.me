@@ -247,7 +247,6 @@ const Portfolio = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right Side Image + Social */}
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: 40 }}
