@@ -102,8 +102,8 @@ const About = () => {
               viewport={{ once: true }}
             >
               {[
-                { number: "50+", label: "Projects" },
-                { number: "30+", label: "Clients" },
+                { number: "7+", label: "Projects" },
+                { number: "5+", label: "Clients" },
                 { number: "4+", label: "Years" },
               ].map((stat, index) => (
                 <motion.div

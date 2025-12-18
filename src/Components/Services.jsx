@@ -23,6 +23,8 @@ const Services = () => {
       color: "from-green-500 to-blue-500",
       features: [
         "React/Next.js",
+        "Typescript",
+        "Redux",
         "Responsive Design",
         "Modern UI/UX",
         "Javascript",
@@ -34,7 +36,7 @@ const Services = () => {
         "Developing robust server-side applications, APIs, and database architectures.",
       icon: <Server className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      features: ["RESTful APIs", "Node js", "Cloud Integration", "Python"],
+      features: ["RESTful APIs", "Node js", "Express js", "Cloud Integration",],
     },
   ];
 

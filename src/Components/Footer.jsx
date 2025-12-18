@@ -315,7 +315,7 @@ const Footer = ({ scrollToSection }) => {
             className="flex items-center justify-center gap-2 flex-wrap"
             whileHover={{ scale: 1.02 }}
           >
-            <span>© 2025</span>
+            <span>© 2026</span>
             <motion.span
               className="text-gradient font-semibold"
               animate={{
