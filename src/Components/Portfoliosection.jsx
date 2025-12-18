@@ -13,8 +13,8 @@ const Portfolio = () => {
         "The Murakoze Device, is a game-changer in customer experience solutions, enabling businesses to capture valuable customer feedback effortlessly.",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tags: ["React", "React js", "Node.js", "MySQL", "Typescript"],
-      category: "Full Stack",
+      tags: ["React native", "React js", "Node.js", "MySQL", "Typescript", "Yii2"],
+      category: "Mobile app, Web",
       githubUrl: "https://github.com/Baudoin10/murakoze_recommandations.git",
       features: [
         "Real-time feedback collection",
@@ -28,7 +28,7 @@ const Portfolio = () => {
         "Intern Connect aims to modernize internship management, bridging the gap between students, institutions, and companies through a seamless digital experience.",
       image:
         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tags: ["React", "Socket.io", "Express", "Node js"],
+      tags: ["React js", "Socket.io", "Express", "Node js"],
       category: "Web App",
       githubUrl: "https://github.com/Baudoin10/intern-connect.git",
       features: [
@@ -43,7 +43,7 @@ const Portfolio = () => {
         "This app helps people—especially farmers, veterinarians, and livestock managers—monitor the health and activity of their animals, detect issues early, save time and labor.",
       image:
         "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      tags: ["React js", "Tailwind css", "React native", "Laravel", "MySQL"],
+      tags: ["Next js", "React router", "Tailwind css", "React native", "Express js", "Supabase", "IoT"],
       category: "Mobile App. Web",
       githubUrl: "https://github.com/Pinto026/cowlytic-mobi.git",
       features: [
