@@ -72,6 +72,7 @@ const Footer = ({ scrollToSection }) => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Left Column: Brand & Description */}
+          
           <motion.div
             className="space-y-4"
             initial={{ opacity: 0, x: -30 }}
@@ -80,7 +81,7 @@ const Footer = ({ scrollToSection }) => {
             viewport={{ once: true }}
           >
             <motion.div
-              className="text-2xl font-bold text-gradient perspective-1000"
+              className="text-2xl font-bold text-white perspective-1000"
               style={{ transformStyle: "preserve-3d" }}
               whileHover={{ scale: 1.05 }}
             >
@@ -88,7 +89,7 @@ const Footer = ({ scrollToSection }) => {
                 style={{ transform: "translateZ(20px)" }}
                 className="inline-block"
               >
-                Baudoin Bolingo
+                BMB
               </motion.span>
             </motion.div>
 
