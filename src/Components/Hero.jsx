@@ -68,16 +68,7 @@ const Hero = ({ scrollToSection }) => {
               </motion.button>
 
               {/* Download CV Button */}
-              {/* <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="/bolingo-baudoin-cv.pdf"
-                download
-                className="border border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-3 rounded-md transition-colors flex items-center gap-2"
-              >
-                <Download className="w-4 h-4" />
-                Download CV
-              </motion.a> */}
+             
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
