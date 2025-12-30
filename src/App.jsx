@@ -6,8 +6,9 @@ import Services from "./Components/Services";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import ThreeBackground from "./Components/ThreeBackground";
+// import ThreeBackground from "./Components/ThreeBackground";
 import Portfolio from "./Components/Portfolio";
+import Three from "./Components/Three";
 
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-x-hidden relative">
       {/* 3D Background Animation */}
-      <ThreeBackground />
+      <Three />
 
       {/* Main Content */}
       <div className="relative z-10">

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-const ThreeBackground = () => {
+const Three = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
@@ -147,7 +147,6 @@ const ThreeBackground = () => {
   }, []);
 
   return (
-  
     <div
       ref={mountRef}
       className="fixed top-0 left-0 w-full h-full opacity-40"
@@ -156,4 +155,4 @@ const ThreeBackground = () => {
   );
 };
 
-export default ThreeBackground;
+export default Three;
