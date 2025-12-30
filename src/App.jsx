@@ -3,11 +3,12 @@ import { useState } from "react";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Services from "./Components/Services";
-import PortfolioSection from "./Components/PortfolioSection";
+// import PortfolioSection from "./Components/Portfolio";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import ThreeBackground from "./Components/ThreeBackground";
+import Portfolio from "./Components/Portfolio";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +33,7 @@ const App = () => {
         />
         <Hero scrollToSection={scrollToSection} />
         <Services />
-        <PortfolioSection />
+        <Portfolio />
         <About />
         <Contact />
         <Footer scrollToSection={scrollToSection} />
